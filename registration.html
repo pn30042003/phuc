@@ -2,146 +2,63 @@
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Student Registration Form</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 30px;
-            background-color: #f9f9f9;
-        }
-        .container {
-            max-width: 650px;
-            margin: 0 auto;
-            background: #ffffff;
-            padding: 25px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
-        h1 {
-            text-align: center;
-            color: #333;
-        }
-        .form-group {
-            margin-bottom: 15px;
-        }
-        label {
-            display: block;
-            margin-bottom: 5px;
-            font-weight: bold;
-            color: #555;
-        }
-        input[type="text"],
-        input[type="email"],
-        input[type="number"],
-        input[type="date"],
-        input[type="password"],
-        select,
-        textarea {
-            width: 100%;
-            padding: 8px 10px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            box-sizing: border-box;
-        }
-        input:read-only, input:disabled {
-            background-color: #e9ecef;
-        }
-        .checkbox-group, .radio-group {
-            margin-top: 5px;
-        }
-        .checkbox-group label, .radio-group label {
-            display: inline-block;
-            font-weight: normal;
-            margin-right: 15px;
-            margin-bottom: 0;
-        }
-        .btn-container {
-            margin-top: 20px;
-            text-align: center;
-        }
-        button {
-            padding: 10px 20px;
-            font-size: 16px;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            margin-right: 10px;
-        }
-        button[type="submit"] {
-            background-color: #28a745;
-            color: white;
-        }
-        button[type="submit"]:hover {
-            background-color: #218838;
-        }
-        button[type="reset"] {
-            background-color: #6c757d;
-            color: white;
-        }
-        button[type="reset"]:hover {
-            background-color: #5a6268;
-        }
-    </style>
 </head>
 <body>
 
-<div class="container">
     <h1>Student Registration Form</h1>
     <form action="#" method="POST">
         
         <!-- Full Name -->
-        <div class="form-group">
-            <label for="fullName">Full Name:</label>
+        <p>
+            <label for="fullName">Full Name:</label><br>
             <input type="text" id="fullName" name="fullName" placeholder="Enter your full name" minlength="3" maxlength="50" required>
-        </div>
+        </p>
 
         <!-- Student Code -->
-        <div class="form-group">
-            <label for="studentCode">Student Code:</label>
+        <p>
+            <label for="studentCode">Student Code:</label><br>
             <input type="text" id="studentCode" name="studentCode" placeholder="Letters and numbers only (e.g., SV001)" pattern="[A-Za-z0-9]+" required>
-        </div>
+        </p>
 
         <!-- Email -->
-        <div class="form-group">
-            <label for="email">Email:</label>
+        <p>
+            <label for="email">Email:</label><br>
             <input type="email" id="email" name="email" placeholder="example@gmail.com" required>
-        </div>
+        </p>
 
         <!-- Phone -->
-        <div class="form-group">
-            <label for="phone">Phone Number:</label>
+        <p>
+            <label for="phone">Phone Number:</label><br>
             <input type="text" id="phone" name="phone" placeholder="0123456789" pattern="[0-9]{10}" title="Phone number must be exactly 10 digits" required>
-        </div>
+        </p>
 
         <!-- Date of Birth -->
-        <div class="form-group">
-            <label for="dob">Date of Birth:</label>
+        <p>
+            <label for="dob">Date of Birth:</label><br>
             <input type="date" id="dob" name="dob">
-        </div>
+        </p>
 
         <!-- Age -->
-        <div class="form-group">
-            <label for="age">Age (18–30):</label>
+        <p>
+            <label for="age">Age (18–30):</label><br>
             <input type="number" id="age" name="age" min="18" max="30">
-        </div>
+        </p>
 
         <!-- Gender -->
-        <div class="form-group">
-            <label>Gender:</label>
-            <div class="radio-group">
-                <input type="radio" id="male" name="gender" value="male">
-                <label for="male">Male</label>
-                <input type="radio" id="female" name="gender" value="female">
-                <label for="female">Female</label>
-                <input type="radio" id="other" name="gender" value="other">
-                <label for="other">Other</label>
-            </div>
-        </div>
+        <p>
+            <label>Gender:</label><br>
+            <input type="radio" id="male" name="gender" value="male">
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">Female</label>
+            <input type="radio" id="other" name="gender" value="other">
+            <label for="other">Other</label>
+        </p>
 
         <!-- Major -->
-        <div class="form-group">
-            <label for="major">Major:</label>
+        <p>
+            <label for="major">Major:</label><br>
             <select id="major" name="major" required>
                 <option value="">-- Select a major --</option>
                 <option value="it">Information Technology</option>
@@ -149,11 +66,11 @@
                 <option value="business">Business Administration</option>
                 <option value="software">Software Engineering</option>
             </select>
-        </div>
+        </p>
 
         <!-- Year -->
-        <div class="form-group">
-            <label for="year">Year:</label>
+        <p>
+            <label for="year">Year:</label><br>
             <select id="year" name="year">
                 <option value="">-- Select year --</option>
                 <option value="1">Year 1</option>
@@ -161,80 +78,75 @@
                 <option value="3">Year 3</option>
                 <option value="4">Year 4</option>
             </select>
-        </div>
+        </p>
 
         <!-- Hobbies -->
-        <div class="form-group">
-            <label>Hobbies:</label>
-            <div class="checkbox-group">
-                <input type="checkbox" id="sports" name="hobby" value="sports">
-                <label for="sports">Sports</label>
-                <input type="checkbox" id="music" name="hobby" value="music">
-                <label for="music">Music</label>
-                <input type="checkbox" id="reading" name="hobby" value="reading">
-                <label for="reading">Reading</label>
-            </div>
-        </div>
+        <p>
+            <label>Hobbies:</label><br>
+            <input type="checkbox" id="sports" name="hobby" value="sports">
+            <label for="sports">Sports</label><br>
+            <input type="checkbox" id="music" name="hobby" value="music">
+            <label for="music">Music</label><br>
+            <input type="checkbox" id="reading" name="hobby" value="reading">
+            <label for="reading">Reading</label>
+        </p>
 
         <!-- Programming Languages -->
-        <div class="form-group">
-            <label>Programming Languages:</label>
-            <div class="checkbox-group">
-                <input type="checkbox" id="lang_html" name="language" value="html">
-                <label for="lang_html">HTML/CSS</label>
-                <input type="checkbox" id="lang_js" name="language" value="javascript">
-                <label for="lang_js">JavaScript</label>
-                <input type="checkbox" id="lang_python" name="language" value="python">
-                <label for="lang_python">Python</label>
-                <input type="checkbox" id="lang_java" name="language" value="java">
-                <label for="lang_java">Java</label>
-            </div>
-        </div>
+        <p>
+            <label>Programming Languages:</label><br>
+            <input type="checkbox" id="lang_html" name="language" value="html">
+            <label for="lang_html">HTML/CSS</label><br>
+            <input type="checkbox" id="lang_js" name="language" value="javascript">
+            <label for="lang_js">JavaScript</label><br>
+            <input type="checkbox" id="lang_python" name="language" value="python">
+            <label for="lang_python">Python</label><br>
+            <input type="checkbox" id="lang_java" name="language" value="java">
+            <label for="lang_java">Java</label>
+        </p>
 
         <!-- Profile Picture -->
-        <div class="form-group">
-            <label for="photo">Profile Picture:</label>
+        <p>
+            <label for="photo">Profile Picture:</label><br>
             <input type="file" id="photo" name="photo" accept="image/*">
-        </div>
+        </p>
 
         <!-- Student ID (Readonly) -->
-        <div class="form-group">
-            <label for="studentId">Student ID:</label>
+        <p>
+            <label for="studentId">Student ID:</label><br>
             <input type="text" id="studentId" name="studentId" value="SV001" readonly>
-        </div>
+        </p>
 
         <!-- Country (Disabled) -->
-        <div class="form-group">
-            <label for="country">Country:</label>
+        <p>
+            <label for="country">Country:</label><br>
             <input type="text" id="country" name="country" value="Vietnam" disabled>
-        </div>
+        </p>
 
         <!-- Address -->
-        <div class="form-group">
-            <label for="address">Address:</label>
-            <textarea id="address" name="address" rows="3" placeholder="Enter your address"></textarea>
-        </div>
+        <p>
+            <label for="address">Address:</label><br>
+            <textarea id="address" name="address" rows="3" cols="30" placeholder="Enter your address"></textarea>
+        </p>
 
         <!-- Introduction -->
-        <div class="form-group">
-            <label for="introduction">Introduction (Max 200 characters):</label>
-            <textarea id="introduction" name="introduction" rows="4" maxlength="200" placeholder="Brief introduction about yourself"></textarea>
-        </div>
+        <p>
+            <label for="introduction">Introduction (Max 200 characters):</label><br>
+            <textarea id="introduction" name="introduction" rows="4" cols="30" maxlength="200" placeholder="Brief introduction about yourself"></textarea>
+        </p>
 
         <!-- Password -->
-        <div class="form-group">
-            <label for="password">Password:</label>
+        <p>
+            <label for="password">Password:</label><br>
             <input type="password" id="password" name="password" placeholder="Enter your password" required>
-        </div>
+        </p>
 
         <!-- Submit & Reset Buttons -->
-        <div class="btn-container">
+        <p>
             <button type="submit">Submit Form</button>
             <button type="reset">Reset Form</button>
-        </div>
+        </p>
 
     </form>
-</div>
 
 </body>
 </html>
